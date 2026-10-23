@@ -1,0 +1,25 @@
+# File System OS - reglages de l'analyseur de code de Visual Studio
+# Ces messages sont des SUGGESTIONS DE STYLE, pas des erreurs. Dans un noyau Cosmos,
+# les champs statiques publics et les "new" explicites sont voulus : on les masque pour
+# que la Liste d'erreurs ne montre que les vrais problemes.
+root = true
+
+[*.cs]
+# "Les champs non constants ne doivent pas etre visibles"
+dotnet_diagnostic.CA2211.severity = none
+# "L'expression 'new' peut etre simplifiee"
+dotnet_diagnostic.IDE0090.severity = none
+# "L'initialisation de l'objet peut etre simplifiee"
+dotnet_diagnostic.IDE0017.severity = none
+# "Utiliser l'expression 'switch'"
+dotnet_diagnostic.IDE0066.severity = none
+# "Le controle de valeurs Null peut etre simplifie"
+dotnet_diagnostic.IDE0031.severity = none
+# "Rendre le champ readonly" / membres inutilises / parametres inutilises
+dotnet_diagnostic.IDE0044.severity = none
+dotnet_diagnostic.IDE0051.severity = none
+dotnet_diagnostic.IDE0052.severity = none
+dotnet_diagnostic.IDE0060.severity = none
+# "Marquer les membres comme static" / conventions de nommage
+dotnet_diagnostic.CA1822.severity = none
+dotnet_diagnostic.IDE1006.severity = none
