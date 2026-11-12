@@ -17,7 +17,10 @@ namespace FileSystemOS.Demarrage.Modules
             Services.ClockOffset = Config.GetInt("decalage_heures", 0);
             int b = Config.GetInt("rendus_par_tour", 2);
             Cogestion.Budget = b < 1 ? 1 : (b > 8 ? 8 : b);
-            return r;
+            // Clavier francais (AZERTY) sauf si "clavier=qwerty"
+            FileSystemOS.Processus.Clavier.Azerty = Config.Get("clavier", "azerty").ToLower() != "qwerty";
+            FileSystemOS.Pilotes.UsbStockage.EcritureAutorisee = Config.GetBool("usb_ecriture", false);
+            return r + (FileSystemOS.Processus.Clavier.Azerty ? " ; clavier AZERTY" : " ; clavier QWERTY");
         }
     }
 }

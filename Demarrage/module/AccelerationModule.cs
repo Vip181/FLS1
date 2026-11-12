@@ -9,10 +9,11 @@ namespace FileSystemOS.Demarrage.Modules
 
         public override string Run()
         {
+            Police.Lire();                       // FSOS ou Comics (reglage "police" de interface.cfg)
             FontCache.Build();                   // texte : pixels precalcules
             HexBitmap warm = Glyphs.Close;       // icones hexa converties maintenant, pas au 1er clic
             warm = Glyphs.Trash;
-            return "police en cache (" + FontCache.Count + " pixels), icones pretes";
+            return "police " + Police.Nom + " en cache (" + FontCache.Count + " pixels), icones pretes";
         }
     }
 }

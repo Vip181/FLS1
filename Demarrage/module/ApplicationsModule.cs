@@ -27,6 +27,10 @@ namespace FileSystemOS.Demarrage.Modules
             Services.SerpentWin = new SerpentWindow(200, 90);
             Services.EnergieWin = new EnergieWindow(300, 140);
             Services.CaptureWin = new CaptureWindow(340, 160);
+            Services.LecteurWin = new LecteurAudioWindow(360, 180);
+            Services.WifiWin = new WifiWindow(600, 240);
+            Services.FichierWin = new DialogueFichier();
+            Services.DocumentWin = new DocumentWindow(110, 40);
             Services.AlerteWin = new AlerteWindow(0, 0);
             Services.CorbeilleWin = new CorbeilleWindow(260, 120);
             Services.AccountsWin = new AccountsWindow(280, 60);
